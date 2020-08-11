@@ -130,7 +130,6 @@ Pet.update(updateData,{where:{id:idPet}}).then(updateResult => {
 // delete pet based on id'pet
 exports.deleting = (req,res) =>{
   const idpet = req.params.id
-// Pet.findOne({where:{id:idpet}}).then(keyResult =>{
   Pet.destroy({where:{id:idpet}}).then(deleted=>{
     if(deleted){
       res.send({message:"Data has been deleted successfully",id:idpet})
@@ -138,8 +137,6 @@ exports.deleting = (req,res) =>{
       res.send({ message: "failure in deleting" });
     }
   })
-// })
-
 }
 
 
