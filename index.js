@@ -19,32 +19,32 @@ app.group("/api/v1", router => {
   router.post("/login", logginController.login);
 
   // species router
-//   router.post("/species",authenticated,speciesController.store);
-//   router.get("/species", speciesController.getAll);
+  router.post("/species",authenticated,speciesController.store);
+  router.get("/species", speciesController.getAll);
 
 
-//   // //pet router
-//   router.post("/pet", authenticated,petController.Insert);
-//   router.get("/pet", authenticated,petController.getAllPet);
-//   router.put("/pet/:id", authenticated,petController.updating);
-//   router.delete("/pet/:id", authenticated,petController.deleting);
+  // //pet router
+  router.post("/pet", authenticated,petController.Insert);
+  router.get("/pet", authenticated,petController.getAllPet);
+  router.put("/pet/:id", authenticated,petController.updating);
+  router.delete("/pet/:id", authenticated,petController.deleting);
 
-//   // // detail pet router
-//   router.get("/pet/:id", authenticated,detailController.getDetail);
-// ``
-//   // // user router
-//   router.get("/user/:id", authenticated,userController.showUser);
-//   router.put("/user/:id", authenticated,userController.updateUser);
-//   router.delete("/user/:id", authenticated,userController.deleting);
-//   //payment router
-//   router.post("/payment", authenticated,paymentController.paying);
-//   router.put("/payment/:id",paymentController.updatePayment);
+  // // detail pet router
+  router.get("/pet/:id", authenticated,detailController.getDetail);
+``
+  // // user router
+  router.get("/user/:id", authenticated,userController.showUser);
+  router.put("/user/:id", authenticated,userController.updateUser);
+  router.delete("/user/:id", authenticated,userController.deleting);
+  //payment router
+  router.post("/payment", authenticated,paymentController.paying);
+  router.put("/payment/:id",paymentController.updatePayment);
 
-//   // match router
-//   router.get("/match", authenticated,matchController.checkmatch);
-  // // router.post("/match", authenticated,matchController.checkmatch);
-  // // router.patch("/match/:id", authenticated, MatchController.UpMat);
-  // // router.get("/match", authenticated, MatchController.TrueMat);
+  // match router
+  router.get("/match", authenticated,matchController.checkmatch);
+  router.post("/match", authenticated,matchController.checkmatch);
+  router.patch("/match/:id", authenticated, MatchController.UpMat);
+  router.get("/match", authenticated, MatchController.TrueMat);
 });
 
 

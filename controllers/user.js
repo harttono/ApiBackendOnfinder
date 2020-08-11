@@ -1,9 +1,4 @@
 const User      = require("../models").user;
-// const Pet       = require("../models").pet;
-// const Age       = require("../models").age;
-// const Species   = require("../models").spicies;
-
-
 //show data user based on id
 exports.showUser = (req,res) =>{
 const idUser = req.params.id
